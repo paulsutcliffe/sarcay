@@ -1,0 +1,2 @@
+module AuspiciadorsHelper
+end

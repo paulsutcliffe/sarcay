@@ -1,4 +1,10 @@
 Sarcay::Application.routes.draw do
+  resources :auspiciadors
+
+
+  resources :slides
+
+
   root to: 'inicio#index'
 
   get "inicio/index"
