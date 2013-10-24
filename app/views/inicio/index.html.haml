@@ -1,2 +1,8 @@
 %h1 Inicio#index
 %p Find me in app/views/inicio/index.html.haml
+
+- @slides.each do |slide|
+  = image_tag slide.imagen_url(:full)
+
+- @auspiciadores.each do |auspiciador|
+  = image_tag auspiciador.logo_url(:thumb)

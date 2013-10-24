@@ -1,5 +1,5 @@
 Sarcay::Application.routes.draw do
-  resources :auspiciadors
+  resources :auspiciadores
 
 
   resources :slides
