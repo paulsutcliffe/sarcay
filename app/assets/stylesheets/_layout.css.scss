@@ -78,10 +78,11 @@
 .item-wrapper {
   margin-bottom: 10px; @extend .clearfix;
   .item {
+    margin-bottom: 10px; text-align: center;
     @extend .col-lg-2;
-    @extend .col-md-2;
-    @extend .col-sm-2;
-    @extend .col-xs-2;
+    @extend .col-md-4;
+    @extend .col-sm-4;
+    @extend .col-xs-6;
   }
   .title + & {margin-top: 50px}
 }

@@ -1,3 +1,8 @@
+- content_for :javascript do
+  = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'
+  = javascript_include_tag 'jcountdown/jquery.jcountdown.js'
+  = javascript_include_tag 'jcountdown/jquery.jcountdown-init.js'
+
 
 #slider
   = render 'bootstrap3_carousel'
@@ -28,7 +33,7 @@
         %p
           Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
           there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-
+          = link_to 'Ver ubicación de los boxes', '#boxes-modal', class: 'btn-custom', :'data-toggle' => 'modal'
 
 
 %section#hayrodj.region-outer.region-default
@@ -74,7 +79,6 @@
 
         .item-wrapper
           = render 'shared/facebook_likebox'
-
 
 
 

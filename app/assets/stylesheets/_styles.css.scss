@@ -155,3 +155,15 @@ $icons-sprite-dimensions: true;
 #mapa {
   iframe {width: 100% !important}
 }
+
+.faltan {text-align: center; margin: 0 0 10px}
+.carousel-caption {@include absolute(left, bottom, 0, 0); background: rgba(0,0,0,0.7); width: 100%; padding: 40px 0 100px}
+
+.btn-custom {
+  @include btn-custom; @include inline-block; 
+
+  #boxes & {
+    float: right; margin-top: 50px
+  }
+}
+

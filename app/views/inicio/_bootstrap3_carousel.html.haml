@@ -13,6 +13,9 @@
       - if index == 1
         .item.active
           = image_tag slide.imagen_url(:full)
+          .carousel-caption
+            %p.faltan Faltan:
+            .contador
       - else
         .item
           = image_tag slide.imagen_url(:full)

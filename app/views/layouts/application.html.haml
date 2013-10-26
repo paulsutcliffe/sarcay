@@ -26,6 +26,10 @@
       .region
         = render 'shared/social_footer'
 
+
+
+  = render 'inicio/bootstrap3_modal'
   = javascript_include_tag 'application'
+  = yield :javascript 
 
   = render 'shared/google_analytics'
