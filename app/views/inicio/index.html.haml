@@ -1,8 +1,89 @@
-%h1 Inicio#index
-%p Find me in app/views/inicio/index.html.haml
 
-- @slides.each do |slide|
-  = image_tag slide.imagen_url(:full)
+#slider
+  = render 'bootstrap3_carousel'
 
-- @auspiciadores.each do |auspiciador|
-  = image_tag auspiciador.logo_url(:thumb)
+#slider-bottom.region-outer
+  .container
+    .region
+      .region-inner
+        %p
+          no te puedes perder la mejor <b>fiesta</b> del año
+
+%section#entradas.region-outer.region-default
+  .container
+    .region
+      .region-inner
+        %i.icon.patone
+        %h2.title ENTRADAS
+        %p
+          Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
+          there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+
+%section#boxes.region-outer.region-default
+  .container
+    .region
+      .region-inner
+        %i.icon.champagne
+        %h2.title BOXES
+        %p
+          Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
+          there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+
+
+
+%section#hayrodj.region-outer.region-default
+  .container
+    .region
+      .region-inner
+        %i.icon.headphones
+        %h2.title HAYRO DJ
+        %p
+          Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
+          there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+
+
+
+
+
+%section#auspiciadores.region-outer
+  .container
+    .region
+      .region-inner
+        %h2.title Auspiciadores
+
+        - @auspiciadores.each_slice(6) do |auspiciador|
+          .item-wrapper
+            - auspiciador.each do |auspiciador|
+              .item
+                = image_tag auspiciador.logo_url(:medium)
+
+
+
+%section#mapa.region-outer
+  = render 'shared/mapa'
+
+
+
+
+
+%section#siguenos.region-outer
+  .container
+    .region
+      .region-inner
+        %h2.title SÍGUENOS EN FACEBOOK
+
+        .item-wrapper
+          = render 'shared/facebook_likebox'
+
+
+
+
+
+
+
+
+
+
+
+
+

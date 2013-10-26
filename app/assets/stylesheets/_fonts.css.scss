@@ -1,0 +1,50 @@
+
+
+
+body, h1, h2, h3, h4, h5, h6, a {font: normal normal $lato-legible 'Lato', sans-serif; color: black; line-height: 145%}
+
+
+h1, h2, h3, h4, h5, h6 {margin: 0}
+p {font-weight: 200; margin: 0 0 30px; color: black; line-height: 145% }
+
+.title-default {
+  font-weight: 700;
+  color: black;
+  margin-bottom: 10px;
+  text-transform: uppercase
+}
+
+.lead-message {
+  @extend .lead;
+  font-size: $lato-large !important; font-weight: 300; font-style: italic
+}
+
+
+h2.title {
+  @extend .title-default;
+  font-size: $lato-large;
+}
+
+
+#main-header {
+  p {font-size: $lato-paragraph; font-weight: 300}
+  @media (min-width: 768px) {
+    p {font-size: $lato-medium; font-weight: 700; }
+  }
+
+  .lt-ie9 & {
+    p {font-size: $lato-medium; font-weight: 700; }
+  }
+}
+
+#content {
+  p {font-size: $lato-paragraph}
+}
+
+#main-footer {
+  p, a {font-size: $lato-paragraph; color: white}
+}
+
+#slider-bottom {
+  p {color: white; @extend .lead-message; text-align: center; margin: 0 }
+}

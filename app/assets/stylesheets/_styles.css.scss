@@ -1,0 +1,157 @@
+
+
+
+
+/* THEMING */
+#main-header {
+  background: black; padding-bottom: 10px; margin: 0; 
+  p {color: white} h1 {margin-top: 0; margin-bottom: 0}
+  z-index: 100; position: relative
+}
+#content {
+  z-index: 50; position: relative;
+  .region-outer {padding: 20px 0}
+
+  @media (min-width: 768px) {
+    .region-outer {padding: 50px 0}
+  }
+}
+
+.region-outer {
+  &#entradas {background: $green-light }
+  &#boxes {background: $green-dark }
+  &#hayrodj {background: white }
+  &#auspiciadores{background: $green-light }
+  &#mapa{background: white}
+  &#siguenos{background: white }
+
+  .region-inner {}
+  
+}
+#main-footer {background: $green-dark; @extend .clearfix}
+
+
+ul {
+  @include no-bullet;
+}
+
+
+/* ICONS */
+$icons-sprite-dimensions: true;
+@import 'icons/*.png';  /* */
+@include all-icons-sprites;
+
+#main-header {
+  i.icon {
+    display: block; margin-left: 10px;
+    &.iphone_small {@include icons-sprite(iphone_small)}
+    &.facebook_small {@include icons-sprite(facebook_small)}
+    &.mail_small {@include icons-sprite(mail_small)}
+    &.map_small {@include icons-sprite(map_small)}
+  }
+}
+
+#content {
+  i.icon {
+    display: block;
+    &.patone {@include icons-sprite(patone)}
+    &.champagne {@include icons-sprite(champagne)}
+    &.headphones {@include icons-sprite(headphones)}
+  }
+}
+
+#main-footer {
+  i.icon {
+    display: block;
+    &.iphone {@include icons-sprite(iphone)}
+    &.facebook {@include icons-sprite(facebook)}
+    &.mail {@include icons-sprite(mail)}
+    &.map {@include icons-sprite(map)}
+  }
+}
+
+
+/* ELEMENTS */
+#main-header {
+  #logo {img {margin: 0 auto}}
+  .region-inner {text-align: center}
+
+
+  p, ul {margin: 5px 0 7px; padding: 0}
+  ul * {@include inline-block; margin: 0 2px} 
+
+  @media (min-width: 800px) {
+    .primary-side {text-align: left}
+    .secondary-side {text-align: right}
+    p, ul {margin: 25px 0 0}
+  }
+  @media (min-width: 361px) {
+    p, ul, ul * {@include inline-block}
+  }
+  .lt-ie9 & {
+    p, ul {margin: 25px 0 0}
+    p, ul, ul * {@include inline-block}
+  } 
+}
+
+
+
+
+#main-footer { 
+  ul {margin: 0}
+
+
+  padding: 85px 0 40px;
+  .social-footer {
+    li {overflow: hidden; margin-bottom: 10px}
+    i {float: left}
+    p {width: 60%; float: right}
+  }
+  @media (min-height: 640px) and (max-height: 640px) {
+    .social-footer {
+      li {height: 70px;}
+    }
+  }
+  @media (min-width: 361px) {
+    .social-footer {
+       * {
+        text-align: center;
+        margin: 0 auto;
+        i {margin-bottom: 30px}
+      }
+      i, p {float: none}
+      p {width: auto}
+    }
+  }
+}
+
+
+#slider {
+  .carousel-inner {
+    img {width: 100%}
+  }
+}
+
+#slider-bottom {
+  background: black
+}
+
+.region-default {
+  i {float: left; margin-right: 20px}
+  &:nth-of-type(even) {
+    i {float: right; margin-left: 20px}
+  }
+  p {overflow: hidden}
+}
+
+#boxes {
+  h2.title, p {color: white}
+}
+
+#auspiciadores, #siguenos {
+  h2.title {text-align: center}
+}
+
+#mapa {
+  iframe {width: 100% !important}
+}
