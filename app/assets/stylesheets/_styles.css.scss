@@ -18,12 +18,24 @@
 }
 
 .region-outer {
-  &#entradas {background: $green-light }
-  &#boxes {background: $green-dark }
-  &#hayrodj {background: white }
-  &#auspiciadores{background: $green-light }
-  &#mapa{background: white}
-  &#siguenos{background: white }
+  @include transition( all 0.3s ease-out );
+
+  &#entradas {background: $green-light;
+    &:hover {background: darken($green-light, $dark);}
+  }
+  &#boxes {background: $green-dark;
+    &:hover {background: darken($green-dark, $dark)}
+  }
+  &#hayrodj {background: white;
+    &:hover {background: darken(white, $dark)}
+  }
+  &#auspiciadores{background: $green-light;
+    &:hover {background: darken($green-light, $dark)}
+  }
+  &#mapa,
+  &#siguenos {background: white;
+    &:hover {background: darken(white, $dark)}
+  }
 
   .region-inner {}
   
@@ -125,6 +137,9 @@ $icons-sprite-dimensions: true;
   }
 }
 
+@media (min-width: 768px) and (max-width: 980px) {
+  #main-footer .social-footer li {height: 190px}
+}
 
 #slider {
   .carousel-inner {
@@ -141,7 +156,18 @@ $icons-sprite-dimensions: true;
   &:nth-of-type(even) {
     i {float: right; margin-left: 20px}
   }
+  @media (max-width: 767px) {
+    &:nth-of-type(even) {
+      i {float: none; margin: 0 auto}
+    }
+  }
   p {overflow: hidden}
+  
+  @media (max-width: 767px) {
+    h2.title {text-align: center; clear: both}
+    i {float: none; margin: 0 auto}
+    p {clear: both; margin-top: 10px}
+  }
 }
 
 #boxes {
@@ -163,7 +189,13 @@ $icons-sprite-dimensions: true;
   @include btn-custom; @include inline-block; 
 
   #boxes & {
-    float: right; margin-top: 50px
+    float: right; margin-top: 50px;
+  }
+  @media (max-width: 767px) {
+    #boxes & {
+      float: none; display: block; text-align: center
+    }
   }
 }
+
 

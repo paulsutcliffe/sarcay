@@ -1,8 +1,11 @@
 - content_for :javascript do
-  = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'
-  = javascript_include_tag 'jcountdown/jquery.jcountdown.js'
-  = javascript_include_tag 'jcountdown/jquery.jcountdown-init.js'
+  =# javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'
+  =# javascript_include_tag 'jcountdown/jquery.jcountdown.js'
+  =# javascript_include_tag 'jcountdown/jquery.jcountdown-init.js'
 
+  = stylesheet_link_tag 'jquery.countdown-1.6.3/jquery.countdown.css'
+  = javascript_include_tag 'jquery.countdown-1.6.3/jquery.countdown.min.js', 'jquery.countdown-1.6.3/jquery.countdown-es.js'
+  = javascript_include_tag 'jquery.countdown-1.6.3/jquery.countdown-init.js'
 
 #slider
   = render 'bootstrap3_carousel'

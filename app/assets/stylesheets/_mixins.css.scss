@@ -18,7 +18,8 @@
   border-radius: 7px; border: 1px solid white; padding:10px; color: white; font-size: 15px;
   text-transform: uppercase; 
   &:hover, &:focus {
-    color: white
+    color: black; text-decoration: none; background: white;
+    @include transition(all 0.3s ease-out);
   }
 }
 

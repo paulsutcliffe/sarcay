@@ -3,14 +3,14 @@
 
   %ol.carousel-indicators
     - @slides.each_with_index do |slide, index|
-      - if index == 1
+      - if index == 0
         %li.active{:'data-target' => '#carousel-generic', :'data-slide-to' => index}
       - else 
         %li{:'data-target' => '#carousel-generic', :'data-slide-to' => index}
 
   .carousel-inner
     - @slides.each_with_index do |slide, index|
-      - if index == 1
+      - if index == 0
         .item.active
           = image_tag slide.imagen_url(:full)
           .carousel-caption
