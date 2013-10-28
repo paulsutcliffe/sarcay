@@ -15,5 +15,6 @@
 //= require twitter/bootstrap/transition
 //= require twitter/bootstrap/carousel
 //= require twitter/bootstrap/modal
-
-
+//= require underscore
+//= require gmaps/google
+//= require jockey.js
