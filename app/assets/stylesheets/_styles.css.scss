@@ -175,8 +175,12 @@ $icons-sprite-dimensions: true;
   h2.title, p {color: white}
 }
 
-#auspiciadores, #siguenos {
-  h2.title {text-align: center; color: #fff;}
+#auspiciadores, #siguenos, #video {
+  h2.title {text-align: center}
+}
+
+#auspiciadores {
+  h2.title {color: #fff}
 }
 
 #mapa {
@@ -219,3 +223,9 @@ $icons-sprite-dimensions: true;
 }
 
 #mapa.region-outer { padding: 0; }
+
+#video {
+  iframe {
+    text-align: center;
+  }
+}
