@@ -6,7 +6,8 @@ DatabaseCleaner.strategy = :truncation
 
 DatabaseCleaner.clean
 
-# FactoryGirl.create :admin
+FactoryGirl.create :admin
+
 10.times do
   FactoryGirl.create :slide
 end

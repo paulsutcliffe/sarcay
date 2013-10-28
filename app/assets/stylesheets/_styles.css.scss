@@ -4,7 +4,7 @@
 
 /* THEMING */
 #main-header {
-  background: black; padding-bottom: 10px; margin: 0; 
+  background: black; padding-bottom: 10px; margin: 0;
   p {color: white} h1 {margin-top: 0; margin-bottom: 0}
   z-index: 100; position: relative
 }
@@ -38,7 +38,7 @@
   }
 
   .region-inner {}
-  
+
 }
 #main-footer {background: $green-dark; @extend .clearfix}
 
@@ -90,7 +90,7 @@ $icons-sprite-dimensions: true;
 
 
   p, ul {margin: 5px 0 7px; padding: 0}
-  ul * {@include inline-block; margin: 0 2px} 
+  ul * {@include inline-block; margin: 0 2px}
 
   @media (min-width: 800px) {
     .primary-side {text-align: left}
@@ -103,13 +103,13 @@ $icons-sprite-dimensions: true;
   .lt-ie9 & {
     p, ul {margin: 25px 0 0}
     p, ul, ul * {@include inline-block}
-  } 
+  }
 }
 
 
 
 
-#main-footer { 
+#main-footer {
   ul {margin: 0}
 
 
@@ -144,6 +144,7 @@ $icons-sprite-dimensions: true;
 #slider {
   .carousel-inner {
     img {width: 100%}
+    p.caption { font-size: 30px; text-align: center;}
   }
 }
 
@@ -162,7 +163,7 @@ $icons-sprite-dimensions: true;
     }
   }
   p {overflow: hidden}
-  
+
   @media (max-width: 767px) {
     h2.title {text-align: center; clear: both}
     i {float: none; margin: 0 auto}
@@ -186,7 +187,7 @@ $icons-sprite-dimensions: true;
 .carousel-caption {@include absolute(left, bottom, 0, 0); background: rgba(0,0,0,0.7); width: 100%; padding: 40px 0 100px}
 
 .btn-custom {
-  @include btn-custom; @include inline-block; 
+  @include btn-custom; @include inline-block;
 
   #boxes & {
     float: right; margin-top: 50px;
@@ -198,4 +199,15 @@ $icons-sprite-dimensions: true;
   }
 }
 
+.boxes { list-style-type: circle; color: #fff;}
 
+
+#fb-root {
+    display: none;
+}
+
+/* To fill the container and nothing else */
+
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+    width: 100% !important;
+}

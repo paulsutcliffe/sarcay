@@ -5,7 +5,7 @@
     - @slides.each_with_index do |slide, index|
       - if index == 0
         %li.active{:'data-target' => '#carousel-generic', :'data-slide-to' => index}
-      - else 
+      - else
         %li{:'data-target' => '#carousel-generic', :'data-slide-to' => index}
 
   .carousel-inner
@@ -19,10 +19,10 @@
       - else
         .item
           = image_tag slide.imagen_url(:full)
-          //.carousel-caption
+          .carousel-caption
+            %p.caption
+              = slide.caption
 
   -#
     = link_to content_tag(:span, '', class: 'icon-prev'), '#carousel-generic', :'data-slide' => 'prev'
     = link_to content_tag(:span, '', class: 'icon-next'), '#carousel-generic', :'data-slide' => 'next'
-
-
