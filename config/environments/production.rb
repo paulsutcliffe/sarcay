@@ -46,7 +46,7 @@ Sarcay::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += ['query.countdown-1.6.3/jquery.countdown.css', 'jquery.countdown-1.6.3/jquery.countdown-es.js', 'jquery.countdown-1.6.3/jquery.countdown.min.js', 'jquery.countdown-1.6.3/jquery.countdown-init.js', 'jockey.js']
+  config.assets.precompile += ['jquery.countdown-1.6.3/jquery.countdown.css', 'jquery.countdown-1.6.3/jquery.countdown-es.js', 'jquery.countdown-1.6.3/jquery.countdown.min.js', 'jquery.countdown-1.6.3/jquery.countdown-init.js', 'jockey.js']
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
