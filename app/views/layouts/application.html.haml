@@ -16,7 +16,7 @@
         .region-inner.secondary-side
           %p 6 de Diciembre
           = render 'shared/social_header'
-          
+
 
   #content
     = yield
@@ -25,11 +25,14 @@
     .container
       .region
         = render 'shared/social_footer'
+      .region.kosmyka
+        = link_to 'Diseño Web por Kosmyka', 'http://www.kosmyka.com', :target => '_blank'
+        = image_tag '/assets/logo-kosmyka-rocket.png'
 
 
 
   = render 'inicio/bootstrap3_modal'
   = javascript_include_tag 'application'
-  = yield :javascript 
+  = yield :javascript
 
   = render 'shared/google_analytics'
