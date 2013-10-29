@@ -1,0 +1,14 @@
+@media screen and (min-width: 768px) {
+  .modal-dialog {
+    left: 50%;
+    width: 910px;
+    margin-left: -465px 
+    
+  }
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.modal-body img {width: 100%}
